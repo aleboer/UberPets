@@ -1,0 +1,16 @@
+.App {
+	text-align: center;
+	background-color: #ffffff;
+	min-height: 100vmin;
+	background-image: url(../images/background.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.App-logo {
+	height: 240px;
+	width: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

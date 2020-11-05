@@ -3,10 +3,7 @@ import { ErrorMessage, Formik, Form, Field } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { history } from '../../history'
 import Logo from '../../images/logo.jpeg'
-import Register from '../register/Register'
-import Dani from '../dani/dani'
 import './Login.css'
 
 const Login = () => {
@@ -17,7 +14,7 @@ const Login = () => {
                 const { data } = resp
                 if (data) {
                     localStorage.setItem('app-token', data)
-                    history.push('/')
+                
                 }
             })
     }
@@ -65,7 +62,7 @@ const Login = () => {
                                 className="Login-Error"
                             />
                         </div>
-                        <button className="button" value="Entrar"><Link className="link" exact to="/dani">Entrar</Link></button>
+                        <button className="button" value="Entrar"><Link className="link" exact to="/Home">Entrar</Link></button>
                         <p>Ainda não possui cadastro?</p>
                         <button className="button" value="Registrar" id="registrar"><Link className="link" exact to="/Register">Cadastre-se</Link></button>
                     </Form>

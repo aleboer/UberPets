@@ -1,11 +1,9 @@
 import React from 'react'
 import Logo from '../../images/logo.jpeg'
-import Dani from '../dani/dani'
 import { Link } from 'react-router-dom'
 import { ErrorMessage, Formik, Form, Field } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
-import { history } from '../../history'
 
 import '../login/Login.css'
 
@@ -15,7 +13,7 @@ const Register = () => {
             .then(resp => {
                 const { data } = resp
                 if (data) {
-                    history.push('/login')
+                    
                 }
             })
     }
@@ -40,6 +38,7 @@ const Register = () => {
                             <p>Nome:</p>
                             <Field
                                 name="nome"
+                                id="name"
                                 className="Login-Field"
                             />
                         </div>
@@ -48,6 +47,7 @@ const Register = () => {
                             <Field
                                 name="email"
                                 className="Login-Field"
+                                id="email"
                             />
                             <ErrorMessage
                                 component="span"
@@ -59,6 +59,7 @@ const Register = () => {
                             <p>Senha:</p>
                             <Field
                                 name="password"
+                                id="password"
                                 type="password"
                                 className="Login-Field"
                             />
@@ -68,7 +69,7 @@ const Register = () => {
                                 className="Login-Error"
                             />
                         </div>
-                        <button className="button" value="Entrar"><Link className="link" exact to="/dani">Cadastrar</Link></button>
+                        <button className="button" value="Entrar"><Link className="link" exact to="/login">Cadastrar</Link></button>
                     </Form>
                 </Formik>
             </div>
